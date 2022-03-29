@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditFriendActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvEditFriend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Friend"
+        android:textSize="34sp"
+        android:layout_gravity="center"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="66dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="Name:"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tvName"
+            android:ems="5"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="66dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/tvName"
+            android:gravity="center"
+            android:text="Phone:"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tvPhone"
+            android:layout_below="@id/etName"
+            android:ems="5" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>
