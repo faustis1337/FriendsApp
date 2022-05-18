@@ -17,19 +17,16 @@ class EditFriendActivity : AppCompatActivity() {
         val contactImage = intent.getStringExtra("contact_image")
 
         if(contactId == -1){
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
+            this.finish()
         }
         etName.setText(intent.getStringExtra("contact_name"))
         etPhone.setText(intent.getStringExtra("contact_phone"))
 
         btnBack.setOnClickListener{
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
+            this.finish()
         }
         btnSave.setOnClickListener{
             Friends.update(contactId,etName.text.toString(),etPhone.text.toString())
-
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }

@@ -13,8 +13,7 @@ class CreateFriendActivity : AppCompatActivity() {
         setContentView(R.layout.activity_create_friend)
 
         btnBack.setOnClickListener{
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
+            this.finish()
         }
         btnCreate.setOnClickListener{
             Friends.add(etName.text.toString(),etPhone.text.toString(),null)
